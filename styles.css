@@ -33,31 +33,24 @@ html, body {
   background: #000000;
 }
 
-/* Cat image overlay styles */
+/* Image overlay styles */
 .image-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  bottom: -5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 80vh;
   z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 .cat-overlay {
-  width: 150%;
-  height: auto;
-  max-height: 150vh;
+  height: 100%;
+  width: auto;
   object-fit: contain;
-  object-position: bottom;
-  pointer-events: none;
-  display: block;
-  margin-bottom: -10%;
 }
 
-/* Adjusted timing for more stripes */
+/* Pulse animation timing */
 .pulse:nth-child(1) { animation-delay: 0s; }
 .pulse:nth-child(2) { animation-delay: 0.5s; }
 .pulse:nth-child(3) { animation-delay: 1s; }
@@ -76,5 +69,55 @@ html, body {
   100% {
     transform: translate(-50%, -50%) scale(8);
     opacity: 0;
+  }
+}
+
+/* Timer and Rank Styles */
+.timer-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
+  font-family: 'Arial', sans-serif;
+}
+
+.timer {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 192, 203, 0.3);
+}
+
+.rank {
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 192, 203, 0.3);
+  transition: all 0.3s ease;
+}
+
+.rank-up {
+  animation: rankUp 1s ease-out;
+  background: rgba(255, 192, 203, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes rankUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
