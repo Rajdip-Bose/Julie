@@ -1,4 +1,5 @@
 // Timer and Ranking System
+console.log('Timer.js loaded!');
 
 const ranks = [
   { title: 'Fluffy Beginner', threshold: 0 },
@@ -24,19 +25,33 @@ class LoveTimer {
   }
 
   createTimerUI() {
+    console.log('Creating timer UI...');
     const timerContainer = document.createElement('div');
     timerContainer.className = 'timer-container';
+    console.log('Created timer container:', timerContainer);
 
     this.timerElement = document.createElement('div');
     this.timerElement.className = 'timer';
+    this.timerElement.textContent = '00:00:00'; // Set initial time display
 
     this.rankElement = document.createElement('div');
     this.rankElement.className = 'rank';
+    this.rankElement.textContent = ranks[0].title; // Set initial rank display
 
     timerContainer.appendChild(this.timerElement);
     timerContainer.appendChild(this.rankElement);
+    console.log('Timer elements added to container');
 
-    document.querySelector('.container').appendChild(timerContainer);
+    // Try to append to the main container first, fallback to body if not found
+    const mainContainer = document.querySelector('#main-container');
+    if (mainContainer) {
+      mainContainer.appendChild(timerContainer);
+      console.log('Timer container added to main container');
+    } else {
+      document.body.appendChild(timerContainer);
+      console.log('Timer container added directly to body (fallback)');
+    }
+    console.log('Timer container added to DOM');
 
     // Set initial rank
     this.updateRank(0);
@@ -74,5 +89,17 @@ class LoveTimer {
 
 // Initialize timer when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  new LoveTimer();
+  console.log('DOM loaded, initializing timer...');
+  try {
+    const containerElement = document.querySelector('.container');
+    if (!containerElement) {
+      console.error('Container element not found!');
+      // Continue anyway, will append to body as fallback
+    } else {
+      console.log('Container element found:', containerElement);
+    }
+    new LoveTimer();
+  } catch (error) {
+    console.error('Error initializing timer:', error);
+  }
 });

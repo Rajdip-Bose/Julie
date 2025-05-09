@@ -40,7 +40,7 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   width: auto;
-  height: 80vh;
+  height: 85vh;
   z-index: 10;
 }
 
@@ -48,6 +48,7 @@ html, body {
   height: 100%;
   width: auto;
   object-fit: contain;
+  /* max-height: 150vh; */
 }
 
 /* Pulse animation timing */
@@ -78,11 +79,13 @@ html, body {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 20;
+  z-index: 100;
   text-align: center;
   color: #fff;
   text-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
   font-family: 'Arial', sans-serif;
+  pointer-events: none;
+  display: block !important;
 }
 
 .timer {
