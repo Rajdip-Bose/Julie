@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=array@401&f[]=britney@400&display=swap');
+
 html, body {
   margin: 0;
   height: 100%;
@@ -76,41 +79,39 @@ html, body {
 /* Timer and Rank Styles */
 .timer-container {
   position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
   z-index: 100;
-  text-align: center;
+  text-align: right;
   color: #fff;
-  text-shadow: 0 0 10px rgba(255, 192, 203, 0.7);
-  font-family: 'Arial', sans-serif;
+  font-family: 'Array', sans-serif;
   pointer-events: none;
   display: block !important;
+  padding: 15px;
 }
 
 .timer {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 400;
   margin-bottom: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 15px;
-  border: 2px solid rgba(255, 192, 203, 0.3);
+  padding: 5px 10px;
+  white-space: nowrap;
 }
 
 .rank {
-  font-size: 1.5rem;
-  padding: 8px 16px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  border: 2px solid rgba(255, 192, 203, 0.3);
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.time, .rank-name {
+  color: rgb(255, 192, 203);
 }
 
 .rank-up {
   animation: rankUp 1s ease-out;
-  background: rgba(255, 192, 203, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 192, 203, 0.9);
 }
 
 @keyframes rankUp {
@@ -122,5 +123,98 @@ html, body {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Background text styles */
+.background-text {
+  position: fixed;
+  top: 50%;
+  left: 5%;  /* Changed from 15% back to 5% to move more to the left */
+  transform: translateY(-50%);
+  font-family: 'Britney', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12vw;
+  letter-spacing: 0.1em;
+  color: white;
+  white-space: nowrap;
+  z-index: 5;
+  pointer-events: none;
+  text-align: left;
+  width: auto;
+  user-select: none;
+}
+
+/* Media Queries for Smartphone */
+@media screen and (max-width: 768px) {
+  /* Adjust Julie text for mobile */
+  .background-text {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18vw;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Adjust timer and rank container */
+  .timer-container {
+    position: fixed;
+    top: auto;
+    bottom: 20vh;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    z-index: 15;
+    width: 100%;
+    background: transparent;
+    padding: 10px 0;
+  }
+
+  .timer {
+    font-size: 1.5rem;  /* Increased from 1.3rem */
+    margin-bottom: 5px;
+  }
+
+  .rank {
+    font-size: 1.3rem;  /* Increased from 1.1rem */
+    padding: 5px 10px;
+    white-space: normal;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .time {
+    color: rgb(255, 192, 203);  /* Keep the time text pink */
+  }
+
+  .timer .seconds {
+    color: black;  /* Make only the seconds black */
+  }
+
+  .rank-name {
+    color: (255, 192, 203);
+  }
+}
+
+/* For extra small devices */
+@media screen and (max-width: 480px) {
+  .background-text {
+    font-size: 20vw;
+    top: 12%;
+  }
+
+  .timer-container {
+    bottom: 15vh;
+  }
+
+  .timer {
+    font-size: 1rem;  /* Increased from 1.2rem */
+  }
+
+  .rank {
+    font-size: 1rem;  /* Increased from 1rem */
+    max-width: 90%;  /* Slightly wider for very small screens */
   }
 }
