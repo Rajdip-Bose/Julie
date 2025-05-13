@@ -194,7 +194,66 @@ html, body {
 
   /* Adjust cat image for mobile */
   .image-container {
-    height: 70vh;
-    bottom: 0;
+    height: 75vh;  /* Adjusted from 60vh back to closer to original 85vh */
+    bottom: -5vh;  /* Restored the original bottom position */
+    position: fixed;
+  }
+
+  .cat-overlay {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+/* For extra small devices */
+@media screen and (max-width: 480px) {
+  /* Adjust Julie text for mobile */
+  .background-text {
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 27vw;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Adjust timer and rank container */
+  .timer-container {
+    position: fixed;
+    top: auto;
+    bottom: 3vh;
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    z-index: 15;
+    width: 100%;
+    background: transparent;
+  }
+
+  .timer {
+    font-size: 1rem;
+    white-space: normal;  
+    margin-bottom: 2px;
+  }
+
+  .rank {
+    font-size: 1rem;
+    padding: 1px 10px;
+    white-space: normal;
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;  /* Added to force new line */
+  }
+
+  .rank-name {
+    display: block;  /* Added to force new line */
+    margin-top: 5px;  /* Added some spacing between lines */
+    color: rgb(255, 192, 203);
+  }
+
+  .image-container {
+    height: 70vh;  /* Slightly smaller for very small screens but maintaining position */
+    bottom: -5vh;
   }
 }
