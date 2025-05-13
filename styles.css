@@ -153,7 +153,7 @@ html, body {
     top: 15%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 18vw;
+    font-size: 27vw;
     text-align: center;
     width: 100%;
   }
@@ -162,59 +162,39 @@ html, body {
   .timer-container {
     position: fixed;
     top: auto;
-    bottom: 20vh;
+    bottom: 3vh;
     right: 50%;
     transform: translateX(50%);
     text-align: center;
     z-index: 15;
     width: 100%;
     background: transparent;
-    padding: 10px 0;
   }
 
   .timer {
-    font-size: 1.5rem;  /* Increased from 1.3rem */
-    margin-bottom: 5px;
+    font-size: 1rem;
+    white-space: normal;  
+    margin-bottom: 4px;
   }
 
   .rank {
-    font-size: 1.3rem;  /* Increased from 1.1rem */
+    font-size: 1rem;
     padding: 5px 10px;
     white-space: normal;
     max-width: 80%;
     margin: 0 auto;
-  }
-
-  .time {
-    color: rgb(255, 192, 203);  /* Keep the time text pink */
-  }
-
-  .timer .seconds {
-    color: black;  /* Make only the seconds black */
+    display: block;  /* Added to force new line */
   }
 
   .rank-name {
-    color: (255, 192, 203);
-  }
-}
-
-/* For extra small devices */
-@media screen and (max-width: 480px) {
-  .background-text {
-    font-size: 20vw;
-    top: 12%;
+    display: block;  /* Added to force new line */
+    margin-top: 5px;  /* Added some spacing between lines */
+    color: rgb(255, 192, 203);
   }
 
-  .timer-container {
-    bottom: 15vh;
-  }
-
-  .timer {
-    font-size: 1rem;  /* Increased from 1.2rem */
-  }
-
-  .rank {
-    font-size: 1rem;  /* Increased from 1rem */
-    max-width: 90%;  /* Slightly wider for very small screens */
+  /* Adjust cat image for mobile */
+  .image-container {
+    height: 70vh;
+    bottom: 0;
   }
 }
