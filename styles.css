@@ -253,7 +253,7 @@ html, body {
   }
 
   .image-container {
-    height: 70vh;  /* Slightly smaller for very small screens but maintaining position */
+    height: 65vh;  /* Slightly smaller for very small screens but maintaining position */
     bottom: -5vh;
   }
 }
