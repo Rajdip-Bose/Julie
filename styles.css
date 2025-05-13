@@ -210,7 +210,7 @@ html, body {
 @media screen and (max-width: 480px) {
   /* Adjust Julie text for mobile */
   .background-text {
-    top: 15%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 27vw;
