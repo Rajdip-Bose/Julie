@@ -80,7 +80,7 @@ html, body {
 .timer-container {
   position: fixed;
   top: 50%;
-  right: 5%;
+  right: 1%;
   transform: translateY(-50%);
   z-index: 100;
   text-align: right;
@@ -92,16 +92,17 @@ html, body {
 }
 
 .timer {
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.7vw;
+  font-weight: 500;
   margin-bottom: 10px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   white-space: nowrap;
 }
 
 .rank {
-  font-size: 1rem;
+  font-size: 1.2vw;
   padding: 5px 10px;
+  font-weight: 500;
   white-space: nowrap;
 }
 

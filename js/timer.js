@@ -3,15 +3,15 @@ console.log('Timer.js loaded!');
 
 // Define the ranks with their thresholds and text
 const ranks = [
-    { max: 5, text: "Just a curious glance 😽" },
-    { max: 15, text: "Soft smile forming 💞" },
-    { max: 30, text: "Starting to wonder if this is love 😳" },
-    { max: 60, text: "Heart doing backflips 💓" },
-    { max: 120, text: "Lost in her tiny little world 💗" },
-    { max: 300, text: "Planning our future together 💍" },
-    { max: 600, text: "I'd bake her treats and write her songs ✨🍪" },
-    { max: 1000, text: "Meowrried in my dreams 💒🐾" },
-    { max: Infinity, text: "Hopelessly, madly, eternally yours 💖🫠" }
+    { max: 5, text: "Guy who just got here 👋" },
+    { max: 15, text: "Jr Julie Stalker 👀" },
+    { max: 30, text: "Certified Julie Admirer 📜" },
+    { max: 60, text: "Julie Worshipper (Obsessed)" },
+    { max: 120, text: "S-Tier Julie Devotee 🏆" },
+    { max: 300, text: "Julie Enthusiast with Notification On 🔔" },
+    { max: 600, text: "Probably Has Julie as Lock Screen 📱" },
+    { max: 1000, text: "Julie Defender in All Comment Sections 💪" },
+    { max: Infinity, text: "CEO of Julie Overthinking Bureau 💼" }
 ];
 
 class LoveTimer {
